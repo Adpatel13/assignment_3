@@ -1,0 +1,10 @@
+EMAIL Peer, Project Update, 01-15-2026
+EMAIL Boss, Q1 Goals, 01-10-2026
+EMAIL Boss, Urgent Budget, 01-20-2026
+EMAIL ImportantPerson, Contract, 01-20-2026
+COUNT
+NEXT
+READ
+NEXT
+READ
+COUNT
