@@ -1,11 +1,31 @@
 /*
- * Assignment: CEO Email Priority Queue
- * Implementation: Binary Max-Heap over a dynamic list (std::vector)
- * Priority Rules:
- *   1. Sender Rank: Boss (5) > Subordinate (4) > Peer (3) > ImportantPerson (2) > Other (1)
- *   2. Date Key: Newest calendar date takes precedence (YYYYMMDD integer comparison)
- *   3. Arrival Order: Earliest received (lowest sequence counter) breaks exact ties
- */
+========================================================================================
+Course: EECS / Data Structures & Algorithms
+Assignment: Assignment 3 - Priority Queue & GenAI Code Analysis
+File Name: main.cpp
+Author: Aadi Patel
+Date Created: October 1, 2026
+Last Modified: October 1, 2026
+Purpose:
+    Implements a custom object-oriented Binary Max-Heap priority queue from scratch
+    over a dynamic list (std::vector) to manage an executive email inbox for a CEO.
+    The system reads commands sequentially from an external text file and processes:
+      - EMAIL <sender>, <subject>, <date> : Enqueues an email into the heap.
+      - NEXT : Displays the top-priority email without removing it.
+      - READ : Removes the top-priority email without displaying it.
+      - COUNT : Displays the total count of unread emails.
+    
+Priority Invariants:
+    1. Sender Category Rank: Boss (5) > Subordinate (4) > Peer (3) > ImportantPerson (2) > Other (1)
+    2. Date Ordering: More recent calendar date takes precedence (YYYYMMDD integer comparison)
+    3. Arrival Ordering: Earliest arrival (lower sequence counter) breaks exact ties (FIFO)
+
+Collaborators & Sources:
+    1. Claude (Anthropic): Evaluated baseline implementation (Code 1) for MaxHeap mechanics and parsing.
+    2. Gemini (Google): Evaluated comparative implementation (Code 2) for template/date abstractions.
+    3. Course Lecture Notes & Standard Algorithm Text: Binary Heap complete tree parent/child indexing formulas.
+========================================================================================
+*/
 
 #include <iostream>   // Provides std::cout and std::endl for console output operations
 #include <fstream>    // Provides std::ifstream to read external command files
